@@ -1,0 +1,10 @@
+[
+    {
+       "id":0,
+       "title":"Use nomes de variáveis ​​significativos.",
+       "subtitle":"Distinguir nomes de forma que o leitor saiba o que as diferenças oferecem.",
+       "goodCode": "public class ExtratoAssistidoDetalheSaida\n{\n\tpublic string Competencia { get; set; } \n}",
+       "badCode":"public class ExtratoAssistidoDetalheSaida\r\n\t{\r\n\t\tpublic string Competencia { get; set; }\r\n\t\tpublic decimal ValorEntrada { get; set; }\r\n\t\tpublic decimal ValorSaida { get; set; }\r\n\t\tpublic decimal ValorSaldoFinal { get; set; }\r\n\t\tpublic decimal Rentabilidade { get; set; }\r\n\t\tpublic string OpcaoInvestimento { get; set; }\r\n\t\tpublic decimal ValorSaldoInicial { get; set; }\r\n\t}",
+       "modalOpen":false
+    }
+]
