@@ -1,26 +1,22 @@
-# Vue + Tailwind Interactive Component Examples
+# Clean Code Examples
+Examples of clean code with C#, Typescript
 
-A small collection of interactive Vue + Tailwind examples, written from scratch.
-
-[See the examples live on Netlify &rarr;](https://vue-tailwind-examples.netlify.com/)
+## Vue setup
+npm install -g @vue/cli
+npm i -g @vue/cli-service-global
 
 ## Project setup
 ```
 yarn install
 yarn run serve
 ```
-
 Or
-
 ```
 npm install
 npm run serve
 ```
 
 npm run build
-
-# Json escape
-https://www.freeformatter.com/json-escape.html#ad-output
 
 # Others
 npm install -g @vue/cli @vue/cli-service-global
@@ -32,3 +28,16 @@ vue build MyComponent.vue
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 npx tailwindcss init -p
 npm install --save @vue-hero-icons/outline
+
+# Json escape
+https://www.freeformatter.com/json-escape.html#ad-output
+
+# Problems
+- vue No ESLint configuration found.
+    npm install eslint -g -D
+    eslint --init (No projeto)
+
+# Docker 
+docker build .
+docker tag 787a65631a84 cleancode/csharp 
+docker run -it -p 8080:80 -d --name docker-cleancodecsharp cleancode/csharp

@@ -12,7 +12,7 @@
     
       </div>
       <div class="mt-2">
-        <a href="https://github.com/" class="text-sm font-semibold text-gray-600 hover:underline">
+        <a href="https://github.com/leonardopbh/cleancode-csharp-example" class="text-sm font-semibold text-gray-600 hover:underline">
          Ver este código no github
         </a>
       </div>

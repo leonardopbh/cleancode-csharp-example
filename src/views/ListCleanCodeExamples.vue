@@ -19,13 +19,12 @@
                   <tr>
                      <th
                       scope="col"
-                      class=" text-center 
+                      class="text-center 
                         text-left text-xs
                         font-medium
                         text-gray-500
                         uppercase
-                        tracking-wider
-                      "
+                        tracking-wider"
                     >
                       ID
                     </th>
@@ -60,11 +59,11 @@
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                  <tr v-for="cleanCode in listCleanCode" :key="cleanCode.id">
-                    <td class="color-principal text-center whitespace-nowrap font-medium">
+                  <tr v-for="(cleanCode) in listCleanCode" :key="cleanCode.id" >
+                    <td v-if="cleanCode.id  > -1" class="color-principal text-center whitespace-nowrap font-medium">
                       #{{ cleanCode.id }}
                     </td>
-                    <td class="px-6 whitespace-nowrap">
+                    <td v-if="cleanCode.id  > -1" class="px-6 whitespace-nowrap">
                       <div class="flex items-center">
                         <div class="ml-4">
                           <div class="text-sm font-medium text-gray-900">
@@ -76,7 +75,7 @@
                         </div>
                       </div>
                     </td>
-                    <td
+                    <td v-if="cleanCode.id  > -1"
                       class="
                         px-6
                         whitespace-nowrap
@@ -211,7 +210,7 @@ export default {
       this.listCleanCode = feat.map((o) => {
         o.modalOpen = false;
         return o;
-      });
+      })
     },
   },
 };
