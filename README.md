@@ -18,13 +18,9 @@ npm run serve
 
 npm run build
 
-# Others
-npm install -g @vue/cli @vue/cli-service-global
-vue create cleancode_csharp
-npm run serve | vue serve
-vue build MyComponent.vue
+# tailwindcss
+https://tailwindcss.com/docs/
 
-=== TAIWIND
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 npx tailwindcss init -p
 npm install --save @vue-hero-icons/outline

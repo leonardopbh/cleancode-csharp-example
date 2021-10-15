@@ -3,24 +3,24 @@
        "id":0,
        "title":"Use nomes de variáveis ​​significativos.",
        "subtitle":"Distinguir nomes de forma que o leitor saiba o que as diferenças oferecem.",
-       "goodCode": "public class ExtratoAssistidoDetalheSaida\n{\n\tpublic string Competencia { get; set; } \n}",
-       "badCode":"public class ExtratoAssistidoDetalheSaida\r\n\t{\r\n\t\tpublic string Competencia { get; set; }\r\n\t\tpublic decimal ValorEntrada { get; set; }\r\n\t\tpublic decimal ValorSaida { get; set; }\r\n\t\tpublic decimal ValorSaldoFinal { get; set; }\r\n\t\tpublic decimal Rentabilidade { get; set; }\r\n\t\tpublic string OpcaoInvestimento { get; set; }\r\n\t\tpublic decimal ValorSaldoInicial { get; set; }\r\n\t}",
+       "goodCode":"bool goodBetween(int value, int left, int right)\r\n        {\r\n            return left <= value && value <= right;\r\n        }",
+       "badCode": "bool badBetween(int a1 , int a2 , int a3) \r\n        {\r\n            return a2 <= a1 && a1 <= a3;\r\n        }",
        "modalOpen":false
     },
     {
         "id":1,
         "title":"Use nomes de variáveis ​​pronunciáveis",
         "subtitle":"Se você não consegue pronunciar, não pode discutir sem soar como um idiota.",
-        "goodCode": "",
-        "badCode":"",
+        "goodCode": "internal class Customer\r\n    {\r\n        long id { get; set; }\r\n        string? name { get; set; }\r\n        DateTime modificationTimestamp { get; set; }\r\n    }",
+        "badCode":"internal class DtaTbl45\r\n    {\r\n        long idtzqint { get; set; }\r\n        long nmctmstr { get; set; }\r\n        DateTime modymdhms { get; set; }\r\n    }",
         "modalOpen":false
      },
      {
         "id":2,
         "title":"Use o mesmo vocabulário para o mesmo tipo de variável",
         "subtitle":"",
-        "goodCode": "",
-        "badCode":"",
+        "goodCode": "internal interface IGoodGetUser\r\n    {\r\n        User getUser();\r\n    }",
+        "badCode":"internal interface IBadGetUser\r\n    {\r\n        User getUserInfo();\r\n        User getUserDetails();\r\n        User getUserData();\r\n    }",
         "modalOpen":false
      },
      {

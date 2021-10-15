@@ -15,57 +15,51 @@
               "
             >
               <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50">
+                <thead class="bg-gray-700 text-purple-500 uppercase font-medium tracking-wider">
                   <tr>
-                     <th
+                    <th
                       scope="col"
                       class="text-center 
-                        text-left text-xs
-                        font-medium
-                        text-gray-500
-                        uppercase
-                        tracking-wider"
+                      text-left text-xs
+                      font-small pr-5 pl-5"
                     >
                       ID
                     </th>
                     <th
                       scope="col"
-                      class="
-                        px-10
-                        py-3
-                        text-left text-xs
-                        font-medium
-                        text-gray-500
-                        uppercase
-                        tracking-wider
-                      "
+                     class="
+                      pr-10
+                      py-3
+                      text-left text-xs"
                     >
                       Descrição
                     </th>
-                     <th
+                    <th
                       scope="col"
-                      class="
-                        px-10
-                        py-3
-                        text-right text-xs
-                        font-medium
-                        text-gray-500
-                        uppercase
-                        tracking-wider
-                      "
+                      class="px-10
+                      py-3
+                      text-center text-xs"
                     >
                       Linguagem
                     </th>
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                  <tr v-for="(cleanCode) in listCleanCode" :key="cleanCode.id" >
-                    <td v-if="cleanCode.id  > -1" class="color-principal text-center whitespace-nowrap font-medium">
+                  <tr
+                    v-for="cleanCode in listCleanCode"
+                    :key="cleanCode.id"
+                    v-on:click="openModal(cleanCode)"
+                    class="cursor-pointer hover:bg-purple-100"
+                  >
+                    <td
+                      v-if="cleanCode.id > -1"
+                      class="text-purple-500 text-center whitespace-nowrap font-small pr-5 pl-5">
                       #{{ cleanCode.id }}
                     </td>
-                    <td v-if="cleanCode.id  > -1" class="px-6 whitespace-nowrap">
+
+                    <td v-if="cleanCode.id > -1" class="pr-10 py-3">
                       <div class="flex items-center">
-                        <div class="ml-4">
+                        <div>
                           <div class="text-sm font-medium text-gray-900">
                             {{ cleanCode.title }}
                           </div>
@@ -75,13 +69,14 @@
                         </div>
                       </div>
                     </td>
-                    <td v-if="cleanCode.id  > -1"
-                      class="
-                        px-6
-                        whitespace-nowrap
-                        text-right text-sm
-                        font-medium
-                      "
+
+                    <td
+                      v-if="cleanCode.id > -1"
+                      class="px-10
+                 
+                      whitespace-nowrap
+                      text-center text-sm
+                      font-medium"
                     >
                       <button v-on:click="openModal(cleanCode)">
                         <svg
@@ -133,8 +128,20 @@
                             py-6
                           "
                         >
+                          <div class="mb-5 text-center underline">
+                            <label
+                              class="
+                                font-semibold
+                                text-gray-700
+                                hover:underline
+                              "
+                            >
+                              {{ cleanCode.title }}
+                            </label>
+                          </div>
+
                           <label
-                            class="font-semibold text-gray-700 hover:underline"
+                            class="font-semibold text-gray-600 hover:underline"
                           >
                             #{{ cleanCode.id }} Código ruim</label
                           >
@@ -145,7 +152,7 @@
                           </div>
 
                           <label
-                            class="font-semibold text-gray-700 hover:underline"
+                            class="font-semibold text-gray-600 hover:underline"
                             >#{{ cleanCode.id }} Código melhorado</label
                           >
                           <div v-highlight>
@@ -210,7 +217,7 @@ export default {
       this.listCleanCode = feat.map((o) => {
         o.modalOpen = false;
         return o;
-      })
+      });
     },
   },
 };
