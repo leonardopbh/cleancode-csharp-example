@@ -15,31 +15,26 @@
               "
             >
               <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-700 text-purple-500 uppercase font-medium tracking-wider">
+                <thead
+                  class="
+                    bg-gray-700
+                    text-purple-500
+                    uppercase
+                    font-medium
+                    tracking-wider
+                  "
+                >
                   <tr>
                     <th
                       scope="col"
-                      class="text-center 
-                      text-left text-xs
-                      font-small pr-5 pl-5"
+                      class="text-center text-left text-xs font-small pr-5 pl-5"
                     >
                       ID
                     </th>
-                    <th
-                      scope="col"
-                     class="
-                      pr-10
-                      py-3
-                      text-left text-xs"
-                    >
+                    <th scope="col" class="pr-10 py-3 text-left text-xs">
                       Descrição
                     </th>
-                    <th
-                      scope="col"
-                      class="px-10
-                      py-3
-                      text-center text-xs"
-                    >
+                    <th scope="col" class="px-10 py-3 text-center text-xs">
                       Linguagem
                     </th>
                   </tr>
@@ -53,7 +48,14 @@
                   >
                     <td
                       v-if="cleanCode.id > -1"
-                      class="text-purple-500 text-center whitespace-nowrap font-small pr-5 pl-5">
+                      class="
+                        text-purple-500 text-center
+                        whitespace-nowrap
+                        font-small
+                        pr-5
+                        pl-5
+                      "
+                    >
                       #{{ cleanCode.id }}
                     </td>
 
@@ -72,11 +74,12 @@
 
                     <td
                       v-if="cleanCode.id > -1"
-                      class="px-10
-                 
-                      whitespace-nowrap
-                      text-center text-sm
-                      font-medium"
+                      class="
+                        px-10
+                        whitespace-nowrap
+                        text-center text-sm
+                        font-medium
+                      "
                     >
                       <button v-on:click="openModal(cleanCode)">
                         <svg
@@ -180,11 +183,10 @@ import Vue from "vue";
 import vueHljs from "vue-hljs";
 import hljs from "highlight.js";
 import "vue-hljs/dist/style.css";
-
 Vue.use(vueHljs, { hljs });
 
 export default {
-  name: "ComponentExample",
+  name: "ListCleanCodeExamples",
   components: {
     Modal,
   },
@@ -194,30 +196,28 @@ export default {
     };
   },
   created() {
-    import(`../data/${this.$route.params.section}.json`).then((module) => {
-      console.log(module);
-      this.listCleanCode = module;
+    import(`../data/${this.$route.params.section}.json`).then((data) => {
+      console.log(data);
+      this.listCleanCode = data;
     });
   },
   methods: {
-    openModal: function (obj) {
-      let feat = this.listCleanCode.default
+    changeModal: function(itemList) {
+      let initialList = this.listCleanCode.default
         ? this.listCleanCode.default
         : this.listCleanCode;
-      this.listCleanCode = feat.map((o) => {
-        if (o.id == obj.id) o.modalOpen = true;
-        else o.modalOpen = false;
-        return o;
+
+      this.listCleanCode = initialList.map((item) => {
+        if (itemList && item.id == itemList.id) item.modalOpen = true;
+        else item.modalOpen = false;
+        return item;
       });
     },
-    closeModal: function () {
-      let feat = this.listCleanCode.default
-        ? this.listCleanCode.default
-        : this.listCleanCode;
-      this.listCleanCode = feat.map((o) => {
-        o.modalOpen = false;
-        return o;
-      });
+    openModal: function(itemList) {
+      this.changeModal(itemList);
+    },
+    closeModal: function() {
+      this.changeModal();
     },
   },
 };

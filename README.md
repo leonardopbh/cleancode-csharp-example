@@ -34,7 +34,5 @@ https://www.freeformatter.com/json-escape.html#ad-output
     eslint --init (No projeto)
 
 # Docker 
-docker build .
-docker tag 787a65631a84 cleancode/csharp 
-docker run -it -p 8080:80 -d -v "C:\temp\DockerVolume\cleancodevolume:/app/dist" --name docker-cleancodecsharp cleancode/csharp
+docker build . --tag cleancode/csharp
 docker run -it -p 8080:80 -d --name docker-cleancodecsharp cleancode/csharp
