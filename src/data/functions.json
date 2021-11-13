@@ -1,3 +1,90 @@
 [
-  
-]
+    {
+      "id": 0,
+      "title": "Os nomes das funções devem dizer o que eles fazem",
+      "subtitle": "",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 1,
+      "title": "As funções devem fazer uma coisa",
+      "subtitle": "Esta é de longe a regra mais importante na engenharia de software. Quando as funções fazem mais de uma coisa, são mais difíceis de compor, testar e raciocinar. Quando você pode isolar uma função para apenas uma ação, ela pode ser refatorada facilmente e seu código ficará muito mais limpo.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 2,
+      "title": "Argumentos de função (2 ou menos idealmente)",
+      "subtitle": "Limitar o número de parâmetros de função é extremamente importante porque torna o teste de sua função mais fácil. Ter mais de três leva a uma explosão combinatória em que você tem que testar toneladas de casos diferentes com cada argumento separado./n Um ou dois argumentos é o caso ideal, e três devem ser evitados, se possível. Qualquer coisa além disso deve ser consolidada. Normalmente, se você tiver mais de dois argumentos, sua função está tentando fazer muito. Nos casos em que não é, na maioria das vezes um objeto de nível superior será suficiente como argumento",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 3,
+      "title": "As funções devem ser apenas um nível de abstração",
+      "subtitle": "Quando você tem mais de um nível de abstração, sua função geralmente está fazendo muito. A divisão de funções leva à capacidade de reutilização e testes mais fáceis.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 4,
+      "title": "Remova o código duplicado",
+      "subtitle": "Faça o seu melhor absoluto para evitar código duplicado. O código duplicado é ruim porque significa que há mais de um lugar para alterar algo se você precisar alterar alguma lógica.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 5,
+      "title": "Remova o código morto",
+      "subtitle": "O código morto é tão ruim quanto o código duplicado. Não há razão para mantê-lo em sua base de código. Se não estiver sendo chamado, livre-se dele! Ele ainda estará seguro em seu histórico de versão se você ainda precisar dele.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 6,
+      "title": "Não use sinalizadores como parâmetros de função",
+      "subtitle": "Os sinalizadores informam ao usuário que esta função faz mais de uma coisa. As funções devem fazer uma coisa. Divida suas funções se elas estiverem seguindo caminhos de código diferentes com base em um booleano.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 7,
+      "title": "Favorece a programação funcional em vez da programação imperativa",
+      "subtitle": "Dê preferência a este estilo de programação quando puder.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 8,
+      "title": "Encapsular condicionais",
+      "subtitle": "",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 9,
+      "title": "Evite condicionais negativas",
+      "subtitle": "",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 10,
+      "title": "Evite condicionais",
+      "subtitle": "Parece uma tarefa impossível. Ao ouvir isso pela primeira vez, a maioria das pessoas diz: 'como vou fazer algo sem uma ifdeclaração?' A resposta é que você pode usar o polimorfismo para realizar a mesma tarefa em muitos casos. A segunda pergunta geralmente é, 'bem, isso é ótimo, mas por que eu faria isso?' A resposta é um conceito anterior de código limpo que aprendemos: uma função deve fazer apenas uma coisa. Quando você tem classes e funções com ifinstruções, está dizendo ao usuário que sua função faz mais de uma coisa. Lembre-se, faça apenas uma coisa.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    }
+  ]
