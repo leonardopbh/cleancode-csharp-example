@@ -1,88 +1,48 @@
 [
    {
      "id": 0,
-     "title": "",
-     "subtitle": "",
+     "title": "Utilize injeção de dependência",
+     "subtitle": "Sempre que possível utilize injeção de dependência, ele vai tornar seu código mais limpo e desacoplado.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 1,
-     "title": "",
-     "subtitle": "",
+     "title": "Lei de Demeter",
+     "subtitle": "A Lei de Demeter (LoD) ou princípio do menor conhecimento é um princípio que prega os seguintes pontos. \n Cada unidade deve ter conhecimento limitado sobre outras unidades: apenas unidades próximas se relacionam. \n Cada unidade deve apenas conversar com seus amigos. \n Não fale com estranhos, apenas fale com seus amigos imediatos",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 2,
-     "title": "",
-     "subtitle": "",
+     "title": "Preste atenção à estrutura e respeite-a",
+     "subtitle": "Respeite os padrões, as camadas, as nomeclaturas. Siga sempre o padrão.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 3,
-     "title": "",
-     "subtitle": "",
+     "title": "Evite tipos primitivos",
+     "subtitle": "Utilize objetos de valor (Value Objects) para tornar o código mais limpo.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 4,
-     "title": "",
-     "subtitle": "",
+     "title": "Evite dependências lógicas",
+     "subtitle": "Não escreva métodos cujo funcionamento correto dependa de algo contido em sua classe.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 5,
-     "title": "",
-     "subtitle": "",
-     "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   },
-   {
-     "id": 6,
-     "title": "",
-     "subtitle": "",
-     "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   },
-   {
-     "id": 7,
-     "title": "",
-     "subtitle": "",
-     "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   },
-   {
-     "id": 8,
-     "title": "",
-     "subtitle": "",
-     "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   },
-   {
-     "id": 9,
-     "title": "",
-     "subtitle": "",
-     "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   },
-   {
-     "id": 10,
-     "title": "",
-     "subtitle": "",
+     "title": "Declare funções de cima para baixo",
+     "subtitle": "Ordenar as funções também é importante. Além da sua ordem de grandeza, suas assinaturas também devem ter uma boa oganização.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false

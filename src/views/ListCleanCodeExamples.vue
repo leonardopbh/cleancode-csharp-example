@@ -1,14 +1,23 @@
 <template>
 	<main>
-		<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+		<div class="max-w-7xl mx-auto pb-8 sm:px-6 lg:px-8">
 			<div class="flex flex-col">
 				<div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-					<div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-						<div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+					<div
+						class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+					>
+						<div
+							class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+						>
 							<table class="min-w-full divide-y divide-gray-200">
-								<thead class="bg-gray-700 text-purple-500 uppercase font-medium tracking-wider">
+								<thead
+									class="bg-gray-700 text-purple-500 uppercase font-medium tracking-wider"
+								>
 									<tr>
-										<th	scope="col" class="text-center text-left text-xs font-small pr-5 pl-5">
+										<th
+											scope="col"
+											class="text-center text-left text-xs font-small pr-5 pl-5"
+										>
 											ID
 										</th>
 										<th scope="col" class="pr-10 py-3 text-left text-xs">
@@ -20,8 +29,16 @@
 									</tr>
 								</thead>
 								<tbody class="bg-white divide-y divide-gray-200">
-									<tr v-for="cleanCode in listCleanCode" :key="cleanCode.id" v-on:click="openModal(cleanCode)" class="cursor-pointer hover:bg-purple-100">
-										<td	v-if="cleanCode.id > -1" class="text-purple-500 text-center whitespace-nowrap font-small pr-5 pl-5">
+									<tr
+										v-for="cleanCode in listCleanCode"
+										:key="cleanCode.id"
+										v-on:click="openModal(cleanCode)"
+										class="cursor-pointer hover:bg-purple-100"
+									>
+										<td
+											v-if="cleanCode.id > -1"
+											class="text-purple-500 text-center whitespace-nowrap font-small pr-5 pl-5"
+										>
 											#{{ cleanCode.id }}
 										</td>
 
@@ -38,7 +55,10 @@
 											</div>
 										</td>
 
-										<td v-if="cleanCode.id > -1" class="px-10 whitespace-nowrap text-center text-sm font-medium">
+										<td
+											v-if="cleanCode.id > -1"
+											class="px-10 whitespace-nowrap text-center text-sm font-medium"
+										>
 											<button v-on:click="openModal(cleanCode)">
 												<svg
 													width="36px"
@@ -78,19 +98,29 @@
 												</svg>
 											</button>
 											<Modal :open="cleanCode.modalOpen" @close="closeModal()">
-												<div class="max-w-lg w-full bg-white rounded-lg shadow-2xl px-6 py-6">
+												<div
+													class="max-w-lg w-full bg-white rounded-lg shadow-2xl px-6 py-6"
+												>
 													<div class="mb-5 text-center underline">
-														<label class="font-semibold text-gray-700 hover:underline">
+														<label
+															class="font-semibold text-gray-700 hover:underline"
+														>
 															{{ cleanCode.title }}
 														</label>
 													</div>
-													<label class="font-semibold text-gray-600 hover:underline">#{{ cleanCode.id }} Código ruim</label>
+													<label
+														class="font-semibold text-gray-600 hover:underline"
+														>#{{ cleanCode.id }} Código ruim</label
+													>
 													<div v-highlight>
 														<pre>
                               <code class="language-csharp"> {{ cleanCode.badCode }}</code>
                             </pre>
 													</div>
-													<label class="font-semibold text-gray-600 hover:underline">#{{ cleanCode.id }} Código melhorado</label>
+													<label
+														class="font-semibold text-gray-600 hover:underline"
+														>#{{ cleanCode.id }} Código melhorado</label
+													>
 													<div v-highlight>
 														<pre>
                               <code class="language-csharp"> {{ cleanCode.goodCode }}</code>
@@ -125,6 +155,7 @@ export default {
 	},
 	data() {
 		return {
+			selectedItemId: 0,
 			listCleanCode: [],
 		};
 	},
@@ -150,7 +181,11 @@ export default {
 		},
 		closeModal: function() {
 			this.changeModal();
+		},
+		prev: function() {
+			let item = { id: this.selectedItemId - 1 };
+			this.changeModal(item);
 		}
-	}
+	},
 };
 </script>

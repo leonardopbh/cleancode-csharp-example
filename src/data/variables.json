@@ -70,5 +70,13 @@
            "goodCode": "",
            "badCode":"",
            "modalOpen":false
-        }
+        },
+        {
+         "id":9,
+         "title":"Não use prefixo ou caracteres especiais",
+         "subtitle":"Não utilize prefixo com o tipo da variável, classe ou método e NUNCA use espaços ou caracteres especiais nestes itens.",
+         "goodCode": "",
+         "badCode":"",
+         "modalOpen":false
+      }
 ]

@@ -86,5 +86,37 @@
       "goodCode": "",
       "badCode": "",
       "modalOpen": false
+    },
+    {
+      "id": 11,
+      "title": "Separe os códigos mult-thread",
+      "subtitle": "Seguindo o mesmo exemplo acima, é uma boa prática manter o que é assíncrono separado do que é síncrono, para não forçar um método a ser ou não assíncrono por conta de outro trecho de código.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 12,
+      "title": "Cuidado com efeitos colaterais",
+      "subtitle": "Evite que uma função altere valores de outra classe sem ser a dela. Isto é chamado de efeito colateral.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 13,
+      "title": "Não tome decisões desnecessárias",
+      "subtitle": "Não utilize os famosos 'flags' para tomar decisões dentro dos métodos, divida-os em vários métodos ou até mesmo outras classes.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    } ,
+    {
+      "id": 14,
+      "title": "Evite métodos estáticos",
+      "subtitle": "Classes e métodos estáticos são difíceis de gerenciar, além de serem compartilhados entre a aplicação como um todo.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
     }
   ]

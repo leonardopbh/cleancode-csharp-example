@@ -1,0 +1,26 @@
+[
+    {
+      "id": 0,
+      "title": "Respeite o padrão",
+      "subtitle": "Defina um padrão e siga, isso facilitara o entendimento dos testes.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 1,
+      "title": "Um assert por teste",
+      "subtitle": "Utilize um e apenas um assert por teste. Mais de um assert pode confundir você e comprometer a escrita do seu teste.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    },
+    {
+      "id": 2,
+      "title": "Repetitível",
+      "subtitle": "O teste deve ser capaz de rodar com parâmetros diferentes.",
+      "goodCode": "",
+      "badCode": "",
+      "modalOpen": false
+    }
+  ]

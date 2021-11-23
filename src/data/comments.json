@@ -1,88 +1,56 @@
 [
    {
      "id": 0,
-     "title": "",
-     "subtitle": "",
+     "title": "Um código bom é expressivo por si só",
+     "subtitle": "Se você precisa comentar uma parte do seu código, é por que algo está errado com ele, ele não está expressivo o suficiente.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 1,
-     "title": "",
-     "subtitle": "",
+     "title": "Jamais deixe linhas de código comentados.",
+     "subtitle": "O controle de versão guarda essa informações para você.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 2,
-     "title": "",
-     "subtitle": "",
+     "title": "Não seja redundante",
+     "subtitle": "Evite comentários que não fazem sentido algum ao contexto ou cenário.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 3,
-     "title": "",
-     "subtitle": "",
+     "title": "Padronize os comentários",
+     "subtitle": "Um comentário não pode ficar sem formatação, bem escrito e padroziado só por ser um comentario.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 4,
-     "title": "",
-     "subtitle": "",
+     "title": "Inteção",
+     "subtitle": "Um bom uso de comentários é sobre a intenção de um método, classe ou variável (Variável nem tanto).",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 5,
-     "title": "",
-     "subtitle": "",
+     "title": "Esclarecimento",
+     "subtitle": "Outro uso interessante para os comentários são esclarecimentos sobre o código.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
    },
    {
      "id": 6,
-     "title": "",
-     "subtitle": "",
-     "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   },
-   {
-     "id": 7,
-     "title": "",
-     "subtitle": "",
-     "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   },
-   {
-     "id": 8,
-     "title": "",
-     "subtitle": "",
-     "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   },
-   {
-     "id": 9,
-     "title": "",
-     "subtitle": "",
-     "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   },
-   {
-     "id": 10,
-     "title": "",
-     "subtitle": "",
+     "title": "Avisos ou Alertas",
+     "subtitle": "Podemos utilizar comentários para alertar sobre trechos do código que podem ter consequências mais sérias.",
      "goodCode": "",
      "badCode": "",
      "modalOpen": false
