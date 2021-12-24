@@ -4,31 +4,27 @@
       "title": "Respeite o padrão",
       "subtitle": "Defina um padrão e siga, isso facilitara o entendimento dos testes. </br> Ao escrever testes unitários, em geral seguimos o princípio AAA :  Act, Arrange e Assert (Organizar, Agir e Assertir): </br>Arrange - É aqui que você normalmente prepara tudo para o teste, em outras palavras, prepara a cena para testar (criar os objetos e configurá-los conforme necessário). </br>Act - É onde o método que estamos testando será executado; </br>Assert - Esta é a parte final do teste em que comparamos o que esperamos que aconteça com o resultado real da execução do método de teste;",
       "goodCode": "",
-      "badCode": "",
-      "modalOpen": false
+      "badCode": ""
     },
     {
       "id": 1,
       "title": "Um assert por teste",
       "subtitle": "Utilize um e apenas um assert por teste. Mais de um assert pode confundir você e comprometer a escrita do seu teste.",
       "goodCode": "",
-      "badCode": "",
-      "modalOpen": false
+      "badCode": ""
     },
     {
       "id": 2,
       "title": "Repetitível",
       "subtitle": "O teste deve ser capaz de rodar com parâmetros diferentes.",
       "goodCode": "",
-      "badCode": "",
-      "modalOpen": false
+      "badCode": ""
     },
     {
       "id": 2,
       "title": "O nome do teste deve revelar sua intenção",
       "subtitle": "Quando um teste falha, seu nome é a primeira indicação do que pode ter dado errado. </br> 1 - A primeira parte do nome representa o nome do método que está sendo testado; </br>2-  A segunda parte do nome nos informa mais sobre o cenário de teste; </br>3-  A  última parte do nome é o resultado esperado;",
       "goodCode": "",
-      "badCode": "",
-      "modalOpen": false
+      "badCode": ""
     }
   ]

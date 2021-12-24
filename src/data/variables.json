@@ -4,79 +4,87 @@
        "title":"Use nomes de variáveis ​​significativos.",
        "subtitle":"Distinguir nomes de forma que o leitor saiba o que as diferenças oferecem.",
        "goodCode":"bool goodBetween(int value, int left, int right)\r\n        {\r\n            return left <= value && value <= right;\r\n        }",
-       "badCode": "bool badBetween(int a1 , int a2 , int a3) \r\n        {\r\n            return a2 <= a1 && a1 <= a3;\r\n        }",
-       "modalOpen":false
+       "badCode": "bool badBetween(int a1 , int a2 , int a3) \r\n        {\r\n            return a2 <= a1 && a1 <= a3;\r\n        }"
+
     },
     {
         "id":1,
         "title":"Use nomes de variáveis ​​pronunciáveis",
         "subtitle":"Se você não consegue pronunciar, não pode discutir sem soar como um idiota.",
         "goodCode": "internal class Customer\r\n    {\r\n        long id { get; set; }\r\n        string? name { get; set; }\r\n        DateTime modificationTimestamp { get; set; }\r\n    }",
-        "badCode":"internal class DtaTbl45\r\n    {\r\n        long idtzqint { get; set; }\r\n        long nmctmstr { get; set; }\r\n        DateTime modymdhms { get; set; }\r\n    }",
-        "modalOpen":false
+        "badCode":"internal class DtaTbl45\r\n    {\r\n        long idtzqint { get; set; }\r\n        long nmctmstr { get; set; }\r\n        DateTime modymdhms { get; set; }\r\n    }"
+ 
      },
      {
         "id":2,
         "title":"Use o mesmo vocabulário para o mesmo tipo de variável",
         "subtitle":"",
         "goodCode": "internal interface IGoodGetUser\r\n    {\r\n        User getUser();\r\n    }",
-        "badCode":"internal interface IBadGetUser\r\n    {\r\n        User getUserInfo();\r\n        User getUserDetails();\r\n        User getUserData();\r\n    }",
-        "modalOpen":false
+        "badCode":"internal interface IBadGetUser\r\n    {\r\n        User getUserInfo();\r\n        User getUserDetails();\r\n        User getUserData();\r\n    }"
+ 
      },
      {
         "id":3,
         "title":"Use nomes pesquisáveis",
         "subtitle":"É importante que o código que escrevemos seja legível e pesquisável. Por não nomear variáveis ​​que acabam sendo significativas para a compreensão de nosso programa, prejudicamos nossos leitores.",
         "goodCode": "",
-        "badCode":"",
-        "modalOpen":false
+        "badCode":""
+ 
      },
     {
         "id":4,
         "title":"Use variáveis ​​explicativas",
         "subtitle":"",
         "goodCode": "",
-        "badCode":"",
-        "modalOpen":false
+        "badCode":""
+ 
      },
      {
          "id":5,
          "title":"Evite mapeamento mental",
          "subtitle":"Explícito é melhor do que implícito.",
          "goodCode": "",
-         "badCode":"",
-         "modalOpen":false
+         "badCode":""
+  
       },
      {
          "id":6,
          "title":"Não adicione contexto desnecessário",
          "subtitle":"Se o nome da sua classe / tipo / objeto lhe diz algo, não repita isso no nome da sua variável.",
          "goodCode": "",
-         "badCode":"",
-         "modalOpen":false
+         "badCode":""
+  
       },
       {
           "id":7,
           "title":"Use argumentos padrão em vez de curto-circuito ou condicionais",
           "subtitle":"Os argumentos padrão costumam ser mais limpos do que curto-circuito.",
           "goodCode": "",
-          "badCode":"",
-          "modalOpen":false
+          "badCode":""
+   
        },
        {
            "id":8,
            "title":"Use enum para documentar a intenção",
            "subtitle":"Enums podem ajudá-lo a documentar a intenção do código. Por exemplo, quando estamos preocupados com os valores serem diferentes ao invés do valor exato deles.",
            "goodCode": "",
-           "badCode":"",
-           "modalOpen":false
+           "badCode":""
+    
         },
         {
          "id":9,
          "title":"Não use prefixo ou caracteres especiais",
          "subtitle":"Não utilize prefixo com o tipo da variável, classe ou método e NUNCA use espaços ou caracteres especiais nestes itens.",
          "goodCode": "",
-         "badCode":"",
-         "modalOpen":false
+         "badCode":""
+  
+      },
+      {
+         "id":10,
+         "title":"Utilize Snake Screaming Case para constantes pesquisáveis.",
+         "subtitle":"Facilita o entendimento, a leitura e a busca por estas constantes.",
+         "goodCode": "",
+         "badCode":""
+  
       }
 ]

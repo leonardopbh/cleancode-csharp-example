@@ -4,23 +4,20 @@
      "title": "Use getters and setters",
      "subtitle": "Usar getters e setters para acessar dados de objetos que encapsulam o comportamento pode ser melhor do que simplesmente procurar uma propriedade em um objeto.",
      "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
+     "badCode": ""
    },
    {
      "id": 1,
      "title": "Faça com que os objetos tenham membros privados / protegidos",
      "subtitle": "Nem tudo deve ser publico, saiba a melhor opção para cada situação. Por exemplo em classes de domínio utilizando o design DDD os setters devem ser privados.",
      "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
+     "badCode": ""
    },
    {
      "id": 2,
      "title": "Prefira imutabilidade",
      "subtitle": "Marque propriedades individuais em uma interface / classe como somente leitura . Isso permite que você trabalhe de maneira funcional (uma mutação inesperada é ruim).",
      "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
+     "badCode": ""
    }
  ]

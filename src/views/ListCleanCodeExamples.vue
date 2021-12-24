@@ -12,10 +12,9 @@
 							<div
 								v-for="cleanCode in listCleanCode"
 								:key="cleanCode.id"
-								v-on:click="openModal(cleanCode)"
 								class="cursor-pointer rounded-md"
 							>
-
+							 <div v-if="cleanCode.id  >= 0">
 								<h2 class="text-gray-500 font-bold text-2xl pl-5 inline-flex">
 									#{{ cleanCode.id }}
 								</h2>
@@ -35,7 +34,7 @@
 											<div v-highlight>
 												<pre>
 													<label class="float-left text-gray-600 hover:underline">#{{ cleanCode.id }} Código ruim</label>
-                              				<code class="language-csharp"> {{ cleanCode.badCode }}</code>
+                              				<code class="language-csharp"> {{ cleanCode.badCode != "" ? cleanCode.badCode : noCodeExampleWarnning }}</code>
                             			</pre>
 											</div>
 										</div>
@@ -43,12 +42,13 @@
 											<div v-highlight>
 												<pre>
 													<label class="float-left text-gray-600 hover:underline">#{{ cleanCode.id }} Código melhorado</label>
-                              				<code class="language-csharp"> {{ cleanCode.goodCode }}</code>
+                              				<code class="language-csharp"> {{ cleanCode.goodCode != "" ? cleanCode.goodCode : noCodeExampleWarnning }}</code>
                             			</pre>
 											</div>
 										</div>
 									</div>
 								</div>
+									</div>
 							</div>
 						</div>
 					</div>
@@ -67,12 +67,12 @@ Vue.use(vueHljs, { hljs });
 
 export default {
 	name: "ListCleanCodeExamples",
-	components: {
-		
+	components: {	
 	},
 	data() {
 		return {
-			listCleanCode: []
+			listCleanCode: [],
+			noCodeExampleWarnning: "Em breve código de exemplo."
 		};
 	},
 	created() {
@@ -81,7 +81,6 @@ export default {
 		});
 	},
 	methods: {
-
-	},
+	}
 };
 </script>

@@ -4,7 +4,13 @@
      "title": "Interface Segregation Principle",
      "subtitle": "Princípio da Segregação da Interface / Uma classe não deve ser forçada a implementar interfaces e métodos que não irão utilizar. </br>Esse princípio basicamente diz que é melhor criar interfaces mais específicas ao invés de termos uma única interface genérica.",
      "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
-   }
+     "badCode": ""
+   },
+   {
+    "id": 1,
+    "title": "Padrão de nome",
+    "subtitle": "Utilize o mesmo padrão de nomeclatura para todas suas interfaces, assim como o local onde ela ficará na solução.",
+    "goodCode": "",
+    "badCode": ""
+  }
  ]

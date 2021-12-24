@@ -4,31 +4,27 @@
      "title": "Não ignore os erros detectados.",
      "subtitle": "Não fazer nada com um erro detectado não dá a você a capacidade de corrigir ou reagir a esse erro. Registrar o erro no console ( console.log) não é muito melhor, pois freqüentemente pode se perder em um mar de coisas impressas no console.",
      "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
+     "badCode": ""
    },
    {
      "id": 1,
      "title": "Não externe erros na sua essência.",
      "subtitle": "tenha em mente que essas informações podem ser exibidas num erro na tela do seu cliente que pode ficar confuso ou até diminuir a confiança do mesmo;",
      "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
+     "badCode": ""
    },
    {
      "id": 2,
      "title": "Crie exceptions customizadas e contextualizadas",
      "subtitle": "Contextualize suas Exceptions, por exemplo, tenha a classe concreta LoginException herdando a classe abstrata Exception padrão e onde centraliza todos os erros tratados do contexto da funcionalidade de login;",
      "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
+     "badCode": ""
    },
    {
      "id": 3,
      "title": "Crie tratativas para Exceptions especifícas.",
      "subtitle": "Facilita o entendimento e o tratamento dos erros.",
      "goodCode": "",
-     "badCode": "",
-     "modalOpen": false
+     "badCode": ""
    }
  ]
