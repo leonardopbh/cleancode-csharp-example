@@ -27,56 +27,56 @@
         "id":3,
         "title":"Use nomes pesquisáveis",
         "subtitle":"É importante que o código que escrevemos seja legível e pesquisável. Por não nomear variáveis ​​que acabam sendo significativas para a compreensão de nosso programa, prejudicamos nossos leitores.",
-        "goodCode": "",
-        "badCode":""
+        "goodCode": "const int MILLISECONDS_IN_A_DAY = 24 * 60 * 60 * 1000;\r\n\r\nTask.Delay(MILLISECONDS_IN_A_DAY);",
+        "badCode":"Task.Delay(86400000);"
  
      },
     {
         "id":4,
         "title":"Use variáveis ​​explicativas",
         "subtitle":"",
-        "goodCode": "",
-        "badCode":""
+        "goodCode": "var users = new Dictionary<decimal, User>();\r\n\r\nforeach (KeyValuePair<decimal, User> user in users)\r\n{\r\n\r\n}",
+        "badCode":"var users = new Dictionary<decimal, User>();\r\n\r\nforeach(var keyValue in users)\r\n{\r\n\r\n}"
  
      },
      {
          "id":5,
          "title":"Evite mapeamento mental",
          "subtitle":"Explícito é melhor do que implícito.",
-         "goodCode": "",
-         "badCode":""
+         "goodCode": "const user = getUser();\r\nconst subscription = getSubscription();",
+         "badCode":"const u = getUser();\r\nconst s = getSubscription();"
   
       },
      {
          "id":6,
          "title":"Não adicione contexto desnecessário",
          "subtitle":"Se o nome da sua classe / tipo / objeto lhe diz algo, não repita isso no nome da sua variável.",
-         "goodCode": "",
-         "badCode":""
+         "goodCode": "public class User\r\n{\r\n    string Name { get; set; }\r\n    Email Email { get; set; }\r\n    DateTime CreatedAt { get; set; }\r\n}",
+         "badCode":"public class User\r\n{\r\n   string UserName { get; set; }\r\n   Email UserEmail { get; set; }\r\n   DateTime UserCreatedAt { get; set; }\r\n}"
   
       },
       {
           "id":7,
           "title":"Use argumentos padrão em vez de curto-circuito ou condicionais",
           "subtitle":"Os argumentos padrão costumam ser mais limpos do que curto-circuito.",
-          "goodCode": "",
-          "badCode":""
+          "goodCode": "void load(int count = 10)\r\n{\r\n\r\n}",
+          "badCode":"void load(int? count)\r\n{\r\n    var loadCount = count != null ? count : 10;\r\n}"
    
        },
        {
            "id":8,
            "title":"Use enum para documentar a intenção",
            "subtitle":"Enums podem ajudá-lo a documentar a intenção do código. Por exemplo, quando estamos preocupados com os valores serem diferentes ao invés do valor exato deles.",
-           "goodCode": "",
-           "badCode":""
+           "goodCode": "enum ROLE\r\n{\r\n    ADMIN,\r\n    PARTNER,\r\n    CUSTOMER\r\n}\r\n\r\nstartup.configure(ROLE.ADMIN);",
+           "badCode":"startup.configure(\"ADMIN\");"
     
         },
         {
          "id":9,
          "title":"Não use prefixo ou caracteres especiais",
          "subtitle":"Não utilize prefixo com o tipo da variável, classe ou método e NUNCA use espaços ou caracteres especiais nestes itens.",
-         "goodCode": "",
-         "badCode":""
+         "goodCode": "string nome = \"Andr\u00E9\";\r\n\r\nvar situacao = \"Pendente\";\r\n\r\npublic class Customer {  }",
+         "badCode":"\/\/ Evite\r\nstring strNome = \"Andr\u00E9\";\r\n\r\n\/\/ Evite\r\nvar situa\u00E7\u00E3o = \"Pendente\";\r\n\r\n\/\/ Evite\r\npublic class clsCustomer {  }"
   
       },
       {

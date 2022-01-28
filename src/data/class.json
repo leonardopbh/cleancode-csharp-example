@@ -52,21 +52,21 @@
     "id": 7,
     "title": "Alta coesão e baixo acoplamento",
     "subtitle": "A coesão define o grau em que os membros da classe se relacionam uns com os outros. </br>O acoplamento refere-se a como as duas classes são relacionadas ou dependentes uma em relação à outra. As classes são consideradas de baixo acoplamento se as mudanças em uma delas não afetarem a outra. </br>Um bom design de software tem alta coesão e baixo acoplamento.",
-    "goodCode": "",
-    "badCode": ""
+    "goodCode": "class UserService\r\n{\r\n    UserService(Repository userRepository) { }\r\n\r\n    async Task getUser(int userId)\r\n    {\r\n        return await userRepository.findOne(id);\r\n    }\r\n\r\n    async Task getTransactions(int userId)\r\n    {\r\n        return await userRepository.transactions.findOne(id);\r\n    }\r\n}\r\n\r\nclass UserService\r\n{\r\n    UserService(EmailSender emailSender) { }\r\n\r\n    async Task sendGreeting()\r\n    {\r\n        await emailSender.send('Welcome!');\r\n    }\r\n\r\n    async Task sendNotification(string message)\r\n    {\r\n        await emailSender.send(message);\r\n    }\r\n}",
+    "badCode": "class UserManager\r\n{\r\n    UserManager(Repository userRepository, EmailSender emailSender) { }\r\n\r\n    async Task getUser(int userId) {\r\n        return await userRepository.findOne(id);\r\n    }\r\n\r\n    async Task getTransactions(int userId)\r\n    {\r\n        return await userRepository.transactions.findOne(id);\r\n    }\r\n\r\n    async Task sendGreeting() {\r\n        await emailSender.send('Welcome!');\r\n    }\r\n\r\n    async Task sendNotification(string message) {\r\n        await emailSender.send(message);\r\n    }\r\n}"
   },
   {
     "id": 8,
     "title": "Prefira composição em vez de herança",
-    "subtitle": "Conforme declarado em Design Patterns da Gang of Four, você deve preferir composição em vez de herança onde puder. </br>Quando usasr Herança: </br>1. Sua herança representa um relacionamento 'é um' e não um relacionamento 'tem um' (Humano-> Animal vs. Usuário-> UserDetails). </br>2. Você pode reutilizar o código das classes base (os humanos podem se mover como todos os animais). </br>Você deseja fazer alterações globais nas classes derivadas, alterando uma classe base. (Mude o gasto calórico de todos os animais quando eles se movem).",
-    "goodCode": "",
-    "badCode": ""
+    "subtitle": "Conforme declarado em Design Patterns da Gang of Four, você deve preferir composição em vez de herança onde puder. </br>Quando usar Herança: </br>1. Sua herança representa um relacionamento 'é um' e não um relacionamento 'tem um' (Humano-> Animal vs. Usuário-> UserDetails). </br>2. Você pode reutilizar o código das classes base (os humanos podem se mover como todos os animais). </br>Você deseja fazer alterações globais nas classes derivadas, alterando uma classe base. (Mude o gasto calórico de todos os animais quando eles se movem).",
+    "goodCode": "class Customer\r\n{\r\n    public Customer(string name, string email) { }\r\n\r\n    public CustomerTaxData customerTaxData { get; init; }\r\n}\r\n\r\nclass CustomerTaxData\r\n{\r\n    public CustomerTaxData(long registrationNumber) { }\r\n}\r\n\r\nstatic void Main(string[] args)\r\n{\r\n    var test = new Customer(\"customerNameTest\", \"customer@email.com\")\r\n    {\r\n        customerTaxData = new CustomerTaxData(155655)\r\n    };\r\n}",
+    "badCode": "class Customer\r\n{\r\n    public Customer(string name, string email)\r\n    {\r\n\r\n    }\r\n}\r\n\r\n\/\/ Bad because Customer \"have\" tax data. CustomerTaxData is not a type of Customer\r\nclass CustomerTaxData : Customer\r\n{\r\n    CustomerTaxData(string name, string email) : base(name, email) { }\r\n}"
   } ,
   {
     "id": 9,
     "title": "Use encadeamento de métodos",
     "subtitle": "Esse padrão é muito útil e comumente usado em muitas bibliotecas. Ele permite que seu código seja expressivo e menos prolixo. Por esse motivo, use o encadeamento de métodos e observe como seu código ficará limpo.",
-    "goodCode": "",
-    "badCode": ""
+    "goodCode": "var query = new QueryBuilder()\r\n  .from(\"users\")\r\n  .page(1, 100)\r\n  .orderBy(\"firstName\", \"lastName\")\r\n  .build();",
+    "badCode": "var queryBuilder = new QueryBuilder();\r\nqueryBuilder.from(\"users\");\r\nqueryBuilder.page(1, 100);\r\nqueryBuilder.orderBy(\"firstName\", \"lastName\");\r\nvar query = queryBuilder.build();"
   }
  ]
