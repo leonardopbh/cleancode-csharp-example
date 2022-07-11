@@ -12,7 +12,19 @@
 									Tipos de registro
 								</h2>
 								<h2 class="text-white text-base pr-5 pl-5 opacity-75">
-                                    Definir um tipo de referência que fornece funcionalidade interna para encapsular dados. Você pode criar tipos de registro com propriedades imutáveis usando parâmetros posicionais ou sintaxe de propriedade padrão
+                                    O C# 9.0 introduz tipos de registro. Você usa a record palavra-chave para definir um tipo de referência que fornece funcionalidade interna para encapsular dados. Você pode criar tipos de registro com propriedades imutáveis usando parâmetros posicionais ou sintaxe de propriedade padrão:
+									<ul>
+<li><a href="#positional-syntax-for-property-definition" data-linktype="self-bookmark">Sintaxe concisa para criar um tipo de referência com propriedades imutáveis</a></li>
+<li>Comportamento útil para um tipo de referência centrado em dados:<ul>
+<li><a href="#value-equality" data-linktype="self-bookmark">Igualdade de valor</a></li>
+<li><a href="#nondestructive-mutation" data-linktype="self-bookmark">Sintaxe concisa para mutação não estruturativa</a></li>
+<li><a href="#built-in-formatting-for-display" data-linktype="self-bookmark">Formatação interna para exibição</a></li>
+</ul>
+</li>
+<li><a href="#inheritance" data-linktype="self-bookmark">Suporte para hierarquias de herança</a></li>
+</ul>
+* So podem herdar de outros registros
+* Podem gastar mais memoria pois cada instância tem uma cópia completa de todos os dados. 
 								</h2>
 								<div class="grid grid-cols-2 gap-2">
 									<div>
