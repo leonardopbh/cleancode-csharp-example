@@ -26,7 +26,7 @@
 * So podem herdar de outros registros
 * Podem gastar mais memoria pois cada instância tem uma cópia completa de todos os dados. 
 								</h2>
-								<div class="grid grid-cols-2 gap-2">
+								<div class="grid grid-cols-1 gap-1">
 									<div>
 										<div v-highlight>
 											<pre>
@@ -62,7 +62,7 @@ public record Person
 								<h2 class="text-white text-base pr-5 pl-5 opacity-75">
                                     Somente setters init fornecem sintaxe consistente para inicializar membros de um objeto. Inicializadores de propriedade deixam claro qual valor está definindo qual propriedade, você pode criar init acessadores em vez de set acessadores para propriedades e indexadores.
 								</h2>
-								<div class="grid grid-cols-2 gap-2">
+								<div class="grid grid-cols-1 gap-1">
 									<div>
 										<div v-highlight>
 											<pre>
@@ -148,7 +148,7 @@ if (e is not null)
 								<h2 class="text-white text-base pr-5 pl-5 opacity-75">
                                     ocê pode omitir o tipo em uma new expressão quando o tipo do objeto criado já for conhecido. O uso mais comum está em declarações de campo:
 								</h2>
-								<div class="grid grid-cols-2 gap-2">
+								<div class="grid grid-cols-1 gap-1">
 									<div>
 										<div v-highlight>
 											<pre>

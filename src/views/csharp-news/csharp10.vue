@@ -102,7 +102,7 @@ public class FileScopedNamespaces
 								<h2 class="text-white text-base pr-5 pl-5 opacity-75">
                                     agora você pode verificar se o parâmetro passado para uma função é null com a menor quantidade de código possível, isso utilizando (!!) em frente do nome do parâmetro.
 								</h2>
-								<div class="grid grid-cols-2 gap-2">
+								<div class="grid grid-cols-1 gap-1">
 									<div>
 										<div v-highlight>
 											<pre>
@@ -142,7 +142,7 @@ Agora no C# 10 focando nas record class foi adicionado as required properties.
 
 Elas basicamente indicam que uma propriedade precisar ser iniciada ao instanciar o objeto (requerida) somente utilizando a palavra required atras do tipo da propriedade.
 								</h2>
-								<div class="grid grid-cols-2 gap-2">
+								<div class="grid grid-cols-1 gap-1">
 									<div>
 										<div v-highlight>
 											<pre>

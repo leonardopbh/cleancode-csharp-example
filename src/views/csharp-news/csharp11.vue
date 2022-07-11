@@ -14,7 +14,7 @@
 								<h2 class="text-white text-base pr-5 pl-5 opacity-75">
                                     No C# podemos utilizar o caractere $ antes de uma string para permitir sua interpolação. O mesmo acontece com a necessidade de quebra de linhas dentro da string que demanda o caractere @ antes da mesma.
 								</h2>
-								<div class="grid grid-cols-2 gap-2">
+								<div class="grid grid-cols-1 gap-1">
 									<div>
 										<div v-highlight>
 											<pre>
