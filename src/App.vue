@@ -257,12 +257,34 @@
 								>
 							</router-link>
 						</li>
-						<li class="nav-item">
-							
 
-<div class="dropdown">
-<a
+							<li class="nav-item">
+							<router-link
 								class="
+                  px-3
+                  py-2
+                  flex
+                  items-center
+                  text-xs
+                  uppercase
+                  font-bold
+                  leading-snug
+                  text-white
+                  hover:opacity-75
+                "
+								:to="{ path: '/csharp-tricks', reload: true }"
+							>
+								<i class="text-lg leading-lg text-white opacity-75" /><span
+									class="ml-2"
+									>Tricks/Dicas</span
+								>
+							</router-link>
+						</li>
+
+						<li class="nav-item">
+							<div class="dropdown">
+								<a
+									class="
                   px-3 dropbtn 
                   py-2
                   flex
@@ -274,24 +296,47 @@
                   text-white
                   hover:opacity-75
                 "
-								 href="#"
-							>
-								<i class="text-lg leading-lg text-white opacity-75" /><span
-									class="ml-2"
-									>Novidades C#</span
+									href="#"
 								>
-							</a>
+									<i class="text-lg leading-lg text-white opacity-75" /><span
+										class="ml-2"
+										>Novidades C#</span
+									>
+								</a>
 
-  <div class="dropdown-content">
-    <router-link :to="{ path: '/csharp-news/v6', reload: true }" class="text-xs font-bold uppercase cursor-pointer">C# 6</router-link>
-    <router-link :to="{ path: '/csharp-news/v7', reload: true }" class="text-xs font-bold uppercase cursor-pointer">C# 7</router-link>
-    <router-link :to="{ path: '/csharp-news/v8', reload: true }" class="text-xs font-bold uppercase cursor-pointer">C# 8</router-link>
-	<router-link :to="{ path: '/csharp-news/v9', reload: true }" class="text-xs font-bold uppercase cursor-pointer">C# 9</router-link>
-	<router-link :to="{ path: '/csharp-news/v10', reload: true }" class="text-xs font-bold uppercase cursor-pointer">C# 10</router-link>
-	<router-link :to="{ path: '/csharp-news/v11', reload: true }" class="text-xs font-bold uppercase cursor-pointer">C# 11</router-link>
-  </div>
-</div>
-
+								<div class="dropdown-content">
+									<router-link
+										:to="{ path: '/csharp-news/v6', reload: true }"
+										class="text-xs font-bold uppercase cursor-pointer"
+										>C# 6</router-link
+									>
+									<router-link
+										:to="{ path: '/csharp-news/v7', reload: true }"
+										class="text-xs font-bold uppercase cursor-pointer"
+										>C# 7</router-link
+									>
+									<router-link
+										:to="{ path: '/csharp-news/v8', reload: true }"
+										class="text-xs font-bold uppercase cursor-pointer"
+										>C# 8</router-link
+									>
+									<router-link
+										:to="{ path: '/csharp-news/v9', reload: true }"
+										class="text-xs font-bold uppercase cursor-pointer"
+										>C# 9</router-link
+									>
+									<router-link
+										:to="{ path: '/csharp-news/v10', reload: true }"
+										class="text-xs font-bold uppercase cursor-pointer"
+										>C# 10</router-link
+									>
+									<router-link
+										:to="{ path: '/csharp-news/v11', reload: true }"
+										class="text-xs font-bold uppercase cursor-pointer"
+										>C# 11</router-link
+									>
+								</div>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -338,34 +383,36 @@ code {
 }
 
 .dropbtn {
-  border: none;
-  cursor: pointer;
+	border: none;
+	cursor: pointer;
 }
 
 .dropdown {
-  position: relative;
+	position: relative;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
 }
 
 .dropdown-content a {
-  color: black !important;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+	color: black !important;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
-  display: block;
+	display: block;
 }
 
 .tracking-wider {

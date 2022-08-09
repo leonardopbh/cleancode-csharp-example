@@ -160,11 +160,11 @@ namespace CSharp10.RequiredProperties.Required
     
     public class Order
     {
-        public List<Product> OrderProducts { get; private set; }
+        public List &lt;Product> OrderProducts { get; private set; }
 
         public Order()
         {
-            OrderProducts = new List<Product>
+            OrderProducts = new List &lt;Product>
             {
                 new Product
                 {

@@ -153,7 +153,7 @@ if (e is not null)
 										<div v-highlight>
 											<pre>
                               						<code class="language-csharp">
-	private List<WeatherObservation> _observations = new();
+	private List &lt;WeatherObservation> _observations = new();
 
 	public WeatherForecast ForecastFor(DateTime forecastDate, WeatherForecastOptions options)
 

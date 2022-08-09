@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import ListCleanCodeExamples from './views/ListCleanCodeExamples.vue'
+import Tricks from './views/csharp-tricks/tricks.vue'
 import CSharp6 from './views/csharp-news/csharp6.vue'
 import CSharp7 from './views/csharp-news/csharp7.vue'
 import CSharp8 from './views/csharp-news/csharp8.vue'
@@ -24,6 +25,14 @@ export default new Router({
       path: '/cleancode/:section',
       name: 'cleancode',
       component: ListCleanCodeExamples,
+      meta: {
+        reload: true,
+      }
+    },
+    {
+      path: '/csharp-tricks',
+      name: 'Tricks',
+      component: Tricks,
       meta: {
         reload: true,
       }
