@@ -107,5 +107,12 @@
       "subtitle": "Classes e métodos estáticos são difíceis de gerenciar, além de serem compartilhados entre a aplicação como um todo.",
       "goodCode": "",
       "badCode": ""
-    }
+    },
+      {
+      "id": 15,
+      "title": "Use encadeamento de métodos",
+      "subtitle": "Esse padrão é muito útil e comumente usado em muitas bibliotecas. Ele permite que seu código seja expressivo e menos prolixo. Por esse motivo, use o encadeamento de métodos e observe como seu código ficará limpo.",
+      "goodCode": "var query = new QueryBuilder()\r\n  .from(\"users\")\r\n  .page(1, 100)\r\n  .orderBy(\"firstName\", \"lastName\")\r\n  .build();",
+      "badCode": "var queryBuilder = new QueryBuilder();\r\nqueryBuilder.from(\"users\");\r\nqueryBuilder.page(1, 100);\r\nqueryBuilder.orderBy(\"firstName\", \"lastName\");\r\nvar query = queryBuilder.build();"
+  }
   ]

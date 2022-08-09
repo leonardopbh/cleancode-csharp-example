@@ -10,7 +10,7 @@
     {
         "id":1,
         "title":"Use nomes de variáveis ​​pronunciáveis",
-        "subtitle":"Se você não consegue pronunciar, não pode discutir sem soar como um idiota.",
+        "subtitle":"Se você não consegue pronunciar, já pode começar a pensar em melhorar.",
         "goodCode": "internal class Customer\r\n    {\r\n        long id { get; set; }\r\n        string? name { get; set; }\r\n        DateTime modificationTimestamp { get; set; }\r\n    }",
         "badCode":"internal class DtaTbl45\r\n    {\r\n        long idtzqint { get; set; }\r\n        long nmctmstr { get; set; }\r\n        DateTime modymdhms { get; set; }\r\n    }"
  
