@@ -258,7 +258,7 @@
 							</router-link>
 						</li>
 
-							<li class="nav-item">
+							<!-- <li class="nav-item">
 							<router-link
 								class="
                   px-3
@@ -276,10 +276,10 @@
 							>
 								<i class="text-lg leading-lg text-white opacity-75" /><span
 									class="ml-2"
-									>Tricks/Dicas</span
+									>Dicas</span
 								>
 							</router-link>
-						</li>
+						</li> -->
 
 						<li class="nav-item">
 							<div class="dropdown">

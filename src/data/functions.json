@@ -3,24 +3,24 @@
       "id": 0,
       "title": "Os nomes das funções devem dizer o que eles fazem",
       "subtitle": "",
-      "goodCode": "",
-      "badCode": ""
+      "goodCode": "DateTime addMonthToDate(DateTime date, int month) => date.AddMonths(month);\r\n\r\nvar date = new DateTime();\r\naddMonthToDate(date, 1);",
+      "badCode": "DateTime addToDate (DateTime date, int month) => date.AddMonths(month);\r\n\nvar date = new DateTime();\r\n\/\/ \u00C9 dif\u00EDcil dizer pelo nome da fun\u00E7\u00E3o o que \u00E9 adicionado\r\naddToDate(date, 1);"
  
     },
     {
       "id": 1,
       "title": "As funções devem fazer uma coisa",
       "subtitle": "Esta é de longe a regra mais importante na engenharia de software. Quando as funções fazem mais de uma coisa, são mais difíceis de compor, testar e raciocinar. Quando você pode isolar uma função para apenas uma ação, ela pode ser refatorada facilmente e seu código ficará muito mais limpo.",
-      "goodCode": "",
-      "badCode": ""
+      "goodCode": "static void emailActiveClients(Client[] clients)\r\n{\r\n    foreach (var client in clients)\r\n    {\r\n        if (isActiveClient(client))\r\n            email(client);\r\n    }\r\n}\r\n\r\nstatic bool isActiveClient(Client client)\r\n{\r\n    const clientRecord = database.lookup(client);\r\n    return clientRecord.isActive();\r\n}",
+      "badCode": "static void emailActiveClients(Client[] clients) {\r\n\tforeach (var client in clients)\r\n\t{\r\n        const clientRecord = database.lookup(client);\r\n        if (clientRecord.isActive())\r\n            email(client);\r\n    "
  
     },
     {
       "id": 2,
       "title": "Argumentos de função (2 ou menos idealmente)",
       "subtitle": "Limitar o número de parâmetros de função é extremamente importante porque torna o teste de sua função mais fácil. Ter mais de três leva a uma explosão combinatória em que você tem que testar toneladas de casos diferentes com cada argumento separado.</br>Um ou dois argumentos é o caso ideal, e três devem ser evitados, se possível. Qualquer coisa além disso deve ser consolidada.</br> Normalmente, se você tiver mais de dois argumentos, sua função está tentando fazer muito. Nos casos em que não é, na maioria das vezes um objeto de nível superior será suficiente como argumento",
-      "goodCode": "",
-      "badCode": ""
+      "goodCode": "void createMenu(Menu menu)\r\n{\r\n    \/\/ ...\r\n}\r\n\r\ncreateMenu(new Menu\r\n{\r\n    title = \"\",\r\n    body = \"\",\r\n    buttonText = \"\",\r\n    cancellable = true\r\n});\r\n\r\npublic class Menu\r\n{\r\n    public string title;\r\n    public string body;\r\n    public string buttonText;\r\n    public bool cancellable;\r\n}",
+      "badCode": "void createMenu(string title, string body, string buttonText, bool cancellable) {\r\n    \/\/ ...\r\n}\r\n\r\ncreateMenu(\"Foo\", \"Bar\", \"Baz\", true);"
 
     },
     {
@@ -48,8 +48,8 @@
       "id": 6,
       "title": "Não use sinalizadores como parâmetros de função",
       "subtitle": "Os sinalizadores informam ao usuário que esta função faz mais de uma coisa. As funções devem fazer uma coisa.</br> Divida suas funções se elas estiverem seguindo caminhos de código diferentes com base em um booleano.",
-      "goodCode": "",
-      "badCode": ""
+      "goodCode": "void createTempFile(string name)\r\n{\r\n    createFile($\".\/temp\/{name}\");\r\n}\r\n\r\nvoid createFile(string name)\r\n{\r\n    File.Create(name);\r\n}",
+      "badCode": "void createFile(string name, bool temp)\r\n{\r\n    if (temp)\r\n        File.Create($\".\/temp\/{name}\");\r\n    else\r\n        File.Create(name);\r\n}"
 
     },
     {
@@ -63,22 +63,22 @@
       "id": 8,
       "title": "Encapsular condicionais",
       "subtitle": "",
-      "goodCode": "",
-      "badCode": ""
+      "goodCode": "bool canActivateService(Subscription subscription, Account account) {\r\n    return subscription.isTrial || account.balance > 0;\r\n}\r\n\r\nif (canActivateService(subscription, account))\r\n{\r\n    \/\/ ...\r\n}",
+      "badCode": "if (subscription.isTrial || account.balance > 0)\r\n{\r\n    \/\/ ...\r\n}"
     },
     {
       "id": 9,
       "title": "Evite condicionais negativas",
       "subtitle": "No C# a negação é dada por um sinal de exclamação (!) que muitas vezes pode ser imperceptível, ocasionando na má leitura do código.",
-      "goodCode": "",
-      "badCode": ""
+      "goodCode": "bool isEmailUsed(string email) => false;\r\n\r\nif (!isEmailUsed(email)) { \r\n   \/\/ ...\r\n}\r\n\/\/ OR\r\nif (isEmailUsed(email)) {\r\n    \/\/ ...\r\n}\r\nelse { }",
+      "badCode": "bool isEmailNotUsed(string email) => false;\r\n\r\nif (isEmailNotUsed(email))\r\n{\r\n    \/\/ ...\r\n}"
     },
     {
       "id": 10,
       "title": "Evite condicionais - Polimorfismo no lugar de IFs",
       "subtitle": "Parece uma tarefa impossível. Ao ouvir isso pela primeira vez, a maioria das pessoas diz: 'como vou fazer algo sem um IF?'</br> A resposta é que você pode usar o polimorfismo para realizar a mesma tarefa em muitos casos.</br> A segunda pergunta geralmente é, 'bem, isso é ótimo, mas por que eu faria isso?'</br> A resposta é um conceito anterior de código limpo que aprendemos: uma função deve fazer apenas uma coisa. Quando você tem classes e funções com ifinstruções, está dizendo ao usuário que sua função faz mais de uma coisa. Lembre-se, faça apenas uma coisa.",
-      "goodCode": "",
-      "badCode": ""
+      "goodCode": "abstract class Airplane\r\n{\r\n    public abstract long getCruisingAltitude();\r\n    protected long getMaxAltitude()\r\n    {\r\n        return default(long);\r\n    }\r\n}\r\n\r\nclass Boeing777 : Airplane\r\n{\r\n    public override long getCruisingAltitude()\r\n    {\r\n        return this.getMaxAltitude() - this.getPassengerCount();\r\n    }\r\n}\r\n\r\nclass AirForceOne : Airplane\r\n{\r\n    public override long getCruisingAltitude()\r\n    {\r\n        return this.getMaxAltitude();\r\n    }\r\n}\r\n\r\nclass Cessna : Airplane\r\n{\r\n    public override long getCruisingAltitude()\r\n    {\r\n        return this.getMaxAltitude() - this.getFuelExpenditure();\r\n    }\r\n}",
+      "badCode": "class Airplane\r\n{\r\n    private string type;\r\n\r\n    long getCruisingAltitude()\r\n    {\r\n        switch (this.type)\r\n        {\r\n            case \"777\":\r\n                return this.getMaxAltitude() - this.getPassengerCount();\r\n            case \"Air Force One\":\r\n                return this.getMaxAltitude();\r\n            case \"Cessna\":\r\n                return this.getMaxAltitude() - this.getFuelExpenditure();\r\n            default:\r\n                throw new Exception(\"Unknown airplane type.\");\r\n        }\r\n    }\r\n}"
     },
     {
       "id": 11,
@@ -105,8 +105,8 @@
       "id": 14,
       "title": "Evite métodos estáticos",
       "subtitle": "Classes e métodos estáticos são difíceis de gerenciar, além de serem compartilhados entre a aplicação como um todo.",
-      "goodCode": "",
-      "badCode": ""
+      "goodCode": "public class NotificationContext\r\n{\r\n    public IList<Notification> Notifications { get; set;}\r\n}",
+      "badCode": "public static class NotificationContext\r\n{\r\n    public static IList<Notification> Notifications { get; set;}\r\n}"
     },
       {
       "id": 15,
@@ -115,4 +115,4 @@
       "goodCode": "var query = new QueryBuilder()\r\n  .from(\"users\")\r\n  .page(1, 100)\r\n  .orderBy(\"firstName\", \"lastName\")\r\n  .build();",
       "badCode": "var queryBuilder = new QueryBuilder();\r\nqueryBuilder.from(\"users\");\r\nqueryBuilder.page(1, 100);\r\nqueryBuilder.orderBy(\"firstName\", \"lastName\");\r\nvar query = queryBuilder.build();"
   }
-  ]
+]
