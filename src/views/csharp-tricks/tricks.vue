@@ -32,7 +32,7 @@
                                 <pre>
                             	    <code class="language-csharp">
 int length = 3;
-Span<int> numbers = stackalloc int[length];
+Span &lt;int> numbers = stackalloc int[length];
 for (var i = 0; i &lt; length; i++)
 {
     numbers[i] = i;
@@ -81,7 +81,7 @@ string[] fruits = { "grape", "passionfruit", "banana", "mango",
 
 // Sort the strings first by their length and then
 //alphabetically by passing the identity selector function.
-IEnumerable<string> query =
+IEnumerable &lt;string> query =
     fruits.OrderBy(fruit => fruit.Length).ThenBy(fruit => fruit);
 
 foreach (string fruit in query)
