@@ -36,3 +36,7 @@ https://www.freeformatter.com/json-escape.html#ad-output
 # Docker 
 docker build . --tag cleancode/csharp
 docker run -it -p 8080:80 -d --name docker-cleancodecsharp cleancode/csharp
+
+
+/usr/share/nginx/html
+
